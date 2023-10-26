@@ -1,6 +1,5 @@
 body {
-    background-image: url('images/backGround.png');
-    background-repeat: repeat;
+
 }
 
 body:before {
@@ -15,4 +14,24 @@ body:before {
 @keyframes moveBackground {
     from {background-position: 0 0;}
     to {background-position: 100% 0;}
+}
+
+.main-panel {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-image: url('images/backGround.png');
+    background-repeat: repeat;
+    border: 1px solid #0FF;
+    box-shadow: 0 0 5px #0FF, 0 0 10px #0FF, 0 0 15px #0FF, 0 0 20px #0FF;
+}
+
+.header {
+    text-align: center;
+}
+
+.header img {
+    max-width: 100%; 
+    height: auto;
 }
