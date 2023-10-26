@@ -1,3 +1,8 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
 body {
 
 }
@@ -21,6 +26,8 @@ body:before {
     max-width: 1200px;
     margin: 50px auto;
     padding: 30px;
+    display: block;
+    overflow: hidden;
     background-image: url('images/backGround.png');
     background-repeat: repeat;
     border: 1px solid #0FF;
@@ -29,9 +36,28 @@ body:before {
 
 .header {
     text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-.header img {
-    max-width: 100%; 
+.attributes {
+    text-align: left;
+    width: 30%;
+}
+
+.attributes img {
+    width: 50%;
     height: auto;
+    display: block;
+}
+
+.section-border {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #4A7562;
+    padding: 12px;
+    margin-bottom: 20px;
 }
