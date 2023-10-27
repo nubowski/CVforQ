@@ -4,7 +4,7 @@
 
 
 body {
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 body:before {
@@ -22,11 +22,23 @@ body:before {
 }
 
 .main-panel {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row; /* stack children horizontally */
+    padding: 0;
+}
+
+.main-panel {
+    display: flex;
+    flex-direction: column;
     width: 80%;
     max-width: 1200px;
     margin: 50px auto;
     padding: 30px;
-    display: block;
     overflow: hidden;
     background-image: url('images/backGround.png');
     background-repeat: repeat;
@@ -35,12 +47,22 @@ body:before {
 }
 
 .header {
+    border: none;
     text-align: center;
     padding: 0;
     margin-bottom: 20px;
-    display: block;
+    display: flex;
     width: 100%;
     height: auto;
+}
+
+.left-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.right-column {
+    flex: 3;
 }
 
 .sub-header {
@@ -60,8 +82,8 @@ body:before {
 }
 
 .attributes {
-    text-align: left;
-    width: 30%;
+    text-align: center;
+    width: 60%;
     display: block;
 }
 
@@ -73,4 +95,27 @@ body:before {
     border-color: #4A7562;
     padding: 0;
     margin-bottom: 20px;
+}
+
+.text {
+    font-family: sans-serif;
+}
+
+.main-text {
+    color: #F7FECB;
+    font-size: 32px;
+
+}
+
+.sub-title-text {
+
+}
+
+.link-text {
+
+}
+
+.hidden-text {
+    color: #F7FECB;
+    font-size: 24px;
 }
