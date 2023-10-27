@@ -1,0 +1,14 @@
+[PROFILE]
+This is the profile text.
+
+[EXPERIENCE]
+This is the experience text.
+
+[ACHIEVEMENTS]
+This is the experience text.
+
+[KNOWLEDGE]
+This is the experience text.
+
+[DEBUFFS]
+This is the experience text.
