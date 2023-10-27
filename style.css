@@ -50,7 +50,7 @@ body:before {
     border: none;
     text-align: center;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     width: 100%;
     height: auto;
@@ -59,10 +59,15 @@ body:before {
 .left-column {
     flex: 1;
     margin-right: 20px;
+    overflow: visible;
+    padding: 20px;
 }
 
 .right-column {
     flex: 3;
+    padding: 0;
+    margin-bottom: 0;
+    overflow: auto;
 }
 
 .sub-header {
@@ -76,15 +81,17 @@ body:before {
     border-right: none;
     padding: 0;
     margin-bottom: 20px;
-    flex-grow: 1;
-    display: flex;
+    display: block;
     align-items: center;
 }
 
 .attributes {
+
+    margin-left: 45px;
     text-align: center;
-    width: 60%;
+    width: 30%;
     display: block;
+    transform: scale(0.8);
 }
 
 .section-border {
@@ -103,12 +110,15 @@ body:before {
 
 .main-text {
     color: #F7FECB;
-    font-size: 24px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-self: flex-start;
 
 }
 
 .sub-title-text {
-
+    margin-left: 50px;
 }
 
 .link-text {
@@ -116,7 +126,6 @@ body:before {
     font-weight: bold;
     margin-left: 25px;
 }
-
 
 
 .collapsible-container {
@@ -136,6 +145,7 @@ body:before {
     color: #8BB289;
     position: relative;
     border-bottom: 1px dashed #8BB289;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .collapsible-header::before {
@@ -148,12 +158,28 @@ body:before {
     position: absolute;
     left: 10px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(0deg);
+    transition: border-left-color 0.3s, transform 0.3s;
 }
+
+.collapsible-header.open::before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.collapsible-header:hover {
+    background-color: #E5EFE7;
+    color: #5A855F;
+}
+
+.collapsible-header:hover::before {
+    border-left-color: #5A855F;
+}
+
 
 .collapsible-content {
     padding: 0 10px;
     max-height: 0;
+    margin: 20px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     font-size: 20px;
@@ -163,4 +189,6 @@ body:before {
 .inner-img {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: auto;
 }
