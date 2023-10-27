@@ -9,8 +9,10 @@ body {
 
 body:before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
     background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat top center;
     z-index: -1;
     animation: moveBackground 200s linear infinite;
@@ -83,6 +85,11 @@ body:before {
     margin-bottom: 20px;
     display: block;
     align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.sub-header:hover img {
+    filter: saturate(150%) hue-rotate(35deg);
 }
 
 .attributes {
@@ -162,9 +169,25 @@ body:before {
     transition: border-left-color 0.3s, transform 0.3s;
 }
 
+.collapsible-header.open::after {
+    animation: glowEffect 0.75s alternate infinite;
+}
+
+@keyframes glowEffect {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .collapsible-header.open::before {
     transform: translateY(-50%) rotate(90deg);
+    animation: glowEffect 0.75s alternate infinite;
 }
+
 
 .collapsible-header:hover {
     background-color: #E5EFE7;
