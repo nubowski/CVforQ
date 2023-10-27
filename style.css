@@ -43,21 +43,34 @@ body:before {
     height: auto;
 }
 
+.sub-header {
+    text-align: left;
+    width: 100%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #4A7562;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
 .attributes {
     text-align: left;
     width: 30%;
-}
-
-.attributes img {
-    width: 50%;
-    height: auto;
     display: block;
 }
 
 .section-border {
+    display: flex;
+    flex-direction: column;
     border-style: solid;
     border-width: 3px;
     border-color: #4A7562;
-    padding: 12px;
+    padding: 0;
     margin-bottom: 20px;
 }
